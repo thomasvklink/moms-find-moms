@@ -1,14 +1,62 @@
+/*Homepage button*/
 .button-go {
   height: 300px;
   width: 300px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  vertical-align: middle;
+  text-align: center;
+  line-height: 300px;
+  font-size: 200%;
 }
 
+/* Bottom navbar */
 .bottom {
     position: absolute;
     bottom: 0;
     left: 0;
+}
+.tabs-home {
+    height: 80px;
+}
+
+.tabs .tab a {
+  color: black;
+}
+.tabs .tab a.active {
+  color: black;
+}
+.tabs .tab a:hover {
+ background-color: rgba(239, 83, 80, 0.1);
+}
+.tabs .tab a:focus {
+  background-color: rgba(239, 83, 80, 0.1);
+}
+.tabs .tab a:focus.active {
+  background-color: rgba(239, 83, 80, 0.1);
+}
+.tabs .indicator {
+  background-color: #ef5350;
+  height: 4px;
+}
+
+.tabs-icon {
+    font-size: 10px;
+    overflow: hidden;
+}
+.tabs-icon i {
+    display: block;
+    margin-top: 0px;
+    margin-bottom: -25px;
+    font-size: 24px;
+}
+
+.tabs .tab {
+    min-width: 50px !important
+}
+.tabs .tab-hide {
+      display: none;
+}
+.no-pd {
+    padding: 0 !important
 }
