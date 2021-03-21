@@ -1,3 +1,14 @@
 .button-go {
-    border-radius; 50px;
+  height: 300px;
+  width: 300px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
