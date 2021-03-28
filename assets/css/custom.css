@@ -63,3 +63,11 @@
 .no-pd {
     padding: 0 !important
 }
+
+#map { 
+    position: absolute;
+    top: 55px; 
+    bottom: 75px;
+    width: 100%;
+    visibility: hidden;
+}

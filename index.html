@@ -1,15 +1,17 @@
 <!DOCTYPE html>
   <html>
     <head>
-      <!--Import Google Icon Font-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      
-      <link type="text/css" rel="stylesheet" href="assets/css/materialize.css"  media="screen,projection"/>
-      <link type="text/css" rel="stylesheet" href="assets/css/custom.css"/>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+
+        <link type="text/css" rel="stylesheet" href="assets/css/materialize.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="assets/css/custom.css"/>
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
     <body>
@@ -26,7 +28,7 @@
     </div>    
     
         <!-- Slider main container -->
-        <div class="swiper-container" style="margin-bottom: 80px;">
+        <div id="swiper" class="swiper-container" style="margin-bottom: 80px;">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
@@ -51,15 +53,15 @@
                 </div>
                 </div>
             </div>
-            <div class="swiper-slide">Map</div>
+            <div class="swiper-slide">
+                
+            </div>
             <div class="swiper-slide">Chat</div>
             <div class="swiper-slide">Info</div>
           </div>
-          <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
         </div>
         
-    
+    <div id='map'></div>
         
     <nav class="bottom white" style="height: auto; z-index: 1;">
         
@@ -78,10 +80,37 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="assets/js/materialize.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3bpoM29BO0dODoZ0wwrUpwt8_vemILXc&callback=initMap"></script>
     <script>
         $(document).ready(function(){
-            M.AutoInit();
+            M.AutoInit(); //Initalize Javascript of Materialize framework
         });
+        
+        //Mapbox implementation
+        
+        mapboxgl.accessToken = 'pk.eyJ1IjoidGhvbWFzdmtsaW5rIiwiYSI6ImNrbXQ4M296bDBpdXEycG13NGYwcnM4Z2YifQ.Y-HjTi_KvGjUZAm0oN8yRg';
+            var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/thomasvklink/ckmt8g4m63rt517o51ekxr8jd',
+            center: [6.893281367468944, 52.21924535469515],
+            zoom: 12,
+        });
+        
+        map.on('load', function () {
+            //map.resize();
+        });
+        
+        // Add geolocate control to the map.
+        map.addControl(
+            new mapboxgl.GeolocateControl({
+                positionOptions: {
+                enableHighAccuracy: false
+                },
+                trackUserLocation: false
+                })
+        );
+        
+        //Navigation
         
         const swiper = new Swiper('.swiper-container', {
               speed: 400,
@@ -90,37 +119,45 @@
         });
         
         function navMatch(){
+            resetMap();
             swiper.slideTo(0);
+            resetNav();
             document.getElementById("icon-match").classList.add('red-text', 'lighten-2');
-            document.getElementById("icon-map").classList.remove('red-text', 'lighten-2');
-            document.getElementById("icon-chat").classList.remove('red-text', 'lighten-2');
-            document.getElementById("icon-info").classList.remove('red-text', 'lighten-2');
         }
         
         function navMap(){
             swiper.slideTo(1);
-            document.getElementById("icon-match").classList.remove('red-text', 'lighten-2');
+            resetNav();
             document.getElementById("icon-map").classList.add('red-text', 'lighten-2');
-            document.getElementById("icon-chat").classList.remove('red-text', 'lighten-2');
-            document.getElementById("icon-info").classList.remove('red-text', 'lighten-2');
+            document.getElementById("swiper").style.visibility = "hidden";
+            document.getElementById("map").style.visibility = "visible";
         }
         
         function navChat(){
+            resetMap();
             swiper.slideTo(2);
-            document.getElementById("icon-match").classList.remove('red-text', 'lighten-2');
-            document.getElementById("icon-map").classList.remove('red-text', 'lighten-2');
+            resetNav();
             document.getElementById("icon-chat").classList.add('red-text', 'lighten-2');
-            document.getElementById("icon-info").classList.remove('red-text', 'lighten-2');
         }
         
         function navInfo(){
+            resetMap();
             swiper.slideTo(3);
-            document.getElementById("icon-match").classList.remove('red-text', 'lighten-2');
-            document.getElementById("icon-map").classList.remove('red-text', 'lighten-2');
-            document.getElementById("icon-chat").classList.remove('red-text', 'lighten-2');
+            resetNav();
             document.getElementById("icon-info").classList.add('red-text', 'lighten-2');
         }
         
+        function resetNav(){
+            document.getElementById("icon-match").classList.remove('red-text', 'lighten-2');
+            document.getElementById("icon-map").classList.remove('red-text', 'lighten-2');
+            document.getElementById("icon-chat").classList.remove('red-text', 'lighten-2');
+            document.getElementById("icon-info").classList.remove('red-text', 'lighten-2');
+        }
+        
+        function resetMap(){
+            document.getElementById("swiper").style.visibility = "visible";
+            document.getElementById("map").style.visibility = "hidden";
+        }
         
     </script>
     </body>
