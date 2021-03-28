@@ -1,18 +1,18 @@
 /*Homepage button*/
 .button-go {
-  height: 300px;
-  width: 300px;
+  height: 200px;
+  width: 200px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
   text-align: center;
-  line-height: 300px;
+  line-height: 200px;
   font-size: 200%;
 }
 
 /* Bottom navbar */
 .bottom {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
 }
@@ -23,9 +23,12 @@
 .tabs .tab a {
   color: black;
 }
-.tabs .tab a.active {
-  color: black;
+
+.tabs .tab a:hover, .tabs .tab a.active {
+    background-color: transparent;
+    color: black;
 }
+
 .tabs .tab a:hover {
  background-color: rgba(239, 83, 80, 0.1);
 }
