@@ -15,16 +15,27 @@
     </head>
 
     <body>
-
+    <ul class="sidenav" id="mobile-demo">
+    <li>
+      <div class=""><img src="images/moms-find-moms.svg" style="margin-top: 10px; margin-left: 20px; width: 250px; height: auto;"></div>
+    </li>
+        <li><a href="sass.html"><i class="material-icons black-text left">account_circle</i>Profiel</a></li>
+        <li><a href="#match" onclick="navMatch()"><i id="icon-match-side" class="material-icons red-text lighten-2 left">favorite</i>Match</a></li>
+        <li><a href="#map" onclick="navMap()"><i id="icon-map-side" class="material-icons">explore</i>Map</a></li>
+        <li><a href="#chat" onclick="navChat()"><i id="icon-chat-side" class="material-icons">chat</i>Chat</a></li>
+        <li><a href="#info" onclick="navInfo()"><i id="icon-info-side" class="material-icons">info</i>info</a></li>
+    </ul>
     <div class="navbar-fixed">
     <nav>
         <div class="nav-wrapper white">
           <a href="index.html" class="brand-logo center"><img src="images/moms-find-moms-icon.svg" style="margin-top: 10px; width: 40px; height: auto;"></a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a class="black-text">voor <b>Humanitas</b></a></li>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
+          <ul id="nav-mobile" class=" hide-on-med-and-down">
+            <li><a class="black-text"><i class="material-icons left">account_circle</i>Profiel</a></li>
           </ul>
         </div>
     </nav>
+    
     </div>    
     
         <!-- Slider main container -->
@@ -33,31 +44,217 @@
           <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide">
-            <div class="container">
-              <div class="row">
-                    <div class="col s12">
-                        <h2 class="center-align">Find another mom</h2>
-                    </div>
-                </div>
+                <div class="container">
+                    <div id="match-screen-1">
+                        <div class="row">
+                            <div class="col s12">
+                                <h2 class="center-align">Find another mom</h2>
+                            </div>
+                        </div>
 
-                <div class="row">
-                    <div class="col s12 center-align">
-                        <a href="#test" class="waves-effect waves-light red lighten-1 btn button-go">Go</a>
-                    </div>
-                </div>
+                        <div class="row">
+                            <div class="col s12 center-align">
+                                <a href="#match" onclick="match()" class="waves-effect waves-light red lighten-1 btn button-go">Go</a>
+                            </div>
+                        </div>
 
-                <div class="row">
-                    <div class="col s12 center-align">
-                     <h5>Het systeem zal zoeken naar de beste match voor jou. <br><br>Waarna jij een keuze kan maken om samen te gaan wandelen en waar.</h5>
+                        <div class="row">
+                            <div class="col s12 center-align">
+                             <h5>Het systeem zal zoeken naar de beste match voor jou. <br><br>Waarna jij een keuze kan maken om samen te gaan wandelen en waar.</h5>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                    <div id="match-screen-2" style="display: none">
+                        <div class="row">
+                            <div class="col s12">
+                                <h2 class="center-align">Looking for another mom...</h2>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col s12 center-align">
+                                <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col s12 center-align">
+                             <h5>We zoeken naar de beste match voor je profiel.</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="match-screen-3" style="display: none">
+                        <div class="row">
+                            <div class="col s12">
+                                <h2 class="center-align">Found her!</h2>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col s12 center-align">
+                                <img src="images/mom-1.jpg" style="margin-top: 10px; width: 200px; height: auto; border-radius: 50%;">
+                                <h4><b>Marielle Jongsma</b></h4>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col s12 center-align">
+                             <h5>Dit is volgens ons de beste match!<br><br> Begin een gesprek om haar beter te leren kennen.</h5><br><br>
+                             <a class="waves-effect waves-light btn btn-large red lighten-1" onclick="navChat()"><i class="material-icons left">chat</i>ga naar de chat</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="swiper-slide">
                 
             </div>
-            <div class="swiper-slide">Chat</div>
-            <div class="swiper-slide">Info</div>
+            <div class="swiper-slide">
+                <div class="container" style="margin-top: 25px; margin-bottom: 100px;">
+                  <div class="row">
+                        <div class="col s12">
+                            <div class="row">
+                                <div class="col s12 m5">
+                                    <div class="card red lighten-1">
+                                        <div class="card-content white-text">
+                                        <i class="material-icons left">chat</i><b>Marielle Jongsma</b><br><br>
+                                          <p class="left-align">Hey, heb je misschien zin om volgende week maandag ergens te gaan wandelen?</p>
+                                            <p class="right-align">15:13 1-4-2021</p>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                      <div class="col s12">
+                            <div class="row">
+                                <div class="col s12 m5 right">
+                                    <div class="card grey">
+                                        <div class="card-content white-text">
+                                        <i class="material-icons left">chat</i><b>Jij</b><br><br>
+                                          <p class="left-align">Dat moet vast lukken, waar zou je willen afspreken?</p>
+                                            <p class="right-align">15:20 1-4-2021</p>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                      <div class="col s12">
+                            <div class="row">
+                                <div class="col s12 m5">
+                                    <div class="card red lighten-1">
+                                        <div class="card-content white-text">
+                                        <i class="material-icons left">chat</i><b>Marielle Jongsma</b><br><br>
+                                          <p class="left-align">Ik heb even op de kaart gekeken, ik ben zelf al even niet meer in het Volkspark geweest.</p>
+                                            <p class="right-align">15:25 1-4-2021</p>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                      <div class="col s12">
+                            <div class="row">
+                                <div class="col s12 m5 right">
+                                    <div class="card grey">
+                                        <div class="card-content white-text">
+                                        <i class="material-icons left">chat</i><b>Jij</b><br><br>
+                                          <p class="left-align">Is goed, doen we dat!</p>
+                                            <p class="right-align">15:40 1-4-2021</p>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                      <div class="col s12">
+                            <div class="row">
+                                <div class="col s12 m5 right">
+                                    <div class="card grey">
+                                        <div class="card-content white-text">
+                                        <i class="material-icons left">chat</i><b>Jij</b><br><br>
+                                          <p class="left-align">Hoelaat doen we?</p>
+                                            <p class="right-align">16:00 1-4-2021</p>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                      <div class="col s12 m5">
+                            <div class="card red lighten-1">
+                                <div class="card-content white-text">
+                                    <i class="material-icons left">chat</i><b>Marielle Jongsma</b><br><br>
+                                        <p class="left-align">Is goed!</p>
+                                            <p class="right-align">17:03 1-4-2021</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            <div class="swiper-slide">
+              <div class="row">
+                <div class="center-align">
+                    <div class="row">
+                        <div class="col s12 m6 offset-m3">
+                          <div class="card red lighten-1">
+                            <div class="card-content white-text">
+                              <span class="card-title"><b>Moms find Moms</b></span>
+                              <p>This website is a protoype system for the Living and Working Tomorrow project in Module 3 of Creative Technology <br> at the University of Twente.</p>
+                                <p></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col s12 m6 offset-m3">
+                          <div class="card red lighten-1">
+                            <div class="card-content white-text">
+                              <p>Build by<br><br></p>
+                                <p><b>Group 17 - Mommification</b><br><br>
+                                Gracy Nedev<br>
+                                Jesse Boomkamp<br>
+                                Ruben Koudijs<br>
+                                Wessel Verstelle<br>
+                                Manu van den Dolder<br>
+                                Thomas van Klink<br><br>
+                                for <b>Humanitas</b>
+                                </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col s12 m6 offset-m3">
+                          <div class="card grey lighten-1">
+                            <div class="card-content white-text">
+                              <p>The following framworks have been used to build this website:<br><br></p>
+                                <table>
+                                <thead>
+                                  <tr>
+                                      <th>Name</th>
+                                      <th>Function</th>
+                                      <th>Website</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Materialize</td>
+                                    <td>Front-end framework</td>
+                                    <td><a class="red-text text-lighten-1" href="https://materializecss.com/">materializecss.com</a></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Swiper</td>
+                                    <td>Javascript slider</td>
+                                    <td><a class="red-text text-lighten-1" href="https://swiperjs.com/">swiperjs.com</a></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Mapbox</td>
+                                    <td>Interactive custom map</td>
+                                    <td><a class="red-text text-lighten-1" href="https://www.mapbox.com/">mapbox.com</a></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
           </div>
         </div>
         
@@ -66,11 +263,23 @@
     <nav class="bottom white" style="height: auto; z-index: 1;">
         
         <div class="row" style="margin-bottom: 0px;">
+            <div id="message-bar" style="display: none">
+                <form class="col s12 red lighten-1">
+                    <div class="row">
+                        <div class="container">
+                            <div class="input-field col s12">
+                                <input  id="message" type="text" class="validate" style="border-bottom: 2px solid #ffff">
+                                <label for="message" class="white-text">Bericht</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
             <ul class="tabs tabs-icon tabs-home">
-            <li class="tab col s3" style="height: 80px"><a href="#test1" onclick="navMatch()"><i id="icon-match" class="material-icons red-text lighten-2">favorite</i><b>Match</b></a></li>
-            <li class="tab col s3" style="height: 80px"><a href="#test2" onclick="navMap()"><i id="icon-map" class="material-icons">explore</i><b>Map</b></a></li>
-            <li class="tab col s3" style="height: 80px"><a href="#test3" onclick="navChat()"><i id="icon-chat" class="material-icons">chat</i><b>Chat</b></a></li>
-            <li class="tab col s3" style="height: 80px"><a href="#test4" onclick="navInfo()"><i id="icon-info" class="material-icons">info</i><b>Info</b></a></li>
+            <li class="tab col s3" style="height: 80px"><a href="#match" onclick="navMatch()"><i id="icon-match" class="material-icons red-text lighten-2">favorite</i><b>Match</b></a></li>
+            <li class="tab col s3" style="height: 80px"><a href="#map" onclick="navMap()"><i id="icon-map" class="material-icons">explore</i><b>Map</b></a></li>
+            <li class="tab col s3" style="height: 80px"><a href="#chat" onclick="navChat()"><i id="icon-chat" class="material-icons">chat</i><b>Chat</b></a></li>
+            <li class="tab col s3" style="height: 80px"><a href="#info" onclick="navInfo()"><i id="icon-info" class="material-icons">info</i><b>Info</b></a></li>
           </ul>
         </div>
           
@@ -86,7 +295,7 @@
             M.AutoInit(); //Initalize Javascript of Materialize framework
         });
         
-        //Mapbox implementation
+        //Mapbox implementation ----------------------------------------------------
         
         mapboxgl.accessToken = 'pk.eyJ1IjoidGhvbWFzdmtsaW5rIiwiYSI6ImNrbXQ4M296bDBpdXEycG13NGYwcnM4Z2YifQ.Y-HjTi_KvGjUZAm0oN8yRg';
             var map = new mapboxgl.Map({
@@ -100,7 +309,7 @@
             map.resize();
         });
         
-        // Add geolocate control to the map.
+        // Add function to display user location control to the map.
         map.addControl(
             new mapboxgl.GeolocateControl({
                 positionOptions: {
@@ -110,12 +319,41 @@
                 })
         );
         
-        //Navigation
+        // When a click event occurs on a feature in the places layer, open a popup at the
+        // location of the feature, with description HTML from its properties.
+        map.on('click', 'places', function (e) {
+            var coordinates = e.features[0].geometry.coordinates.slice();
+            var description = e.features[0].properties.description;
+
+            // Ensure that if the map is zoomed out such that multiple
+            // copies of the feature are visible, the popup appears
+            // over the copy being pointed to.
+            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+            }
+
+        new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map);
+        });
+
+        // Change the cursor to a pointer when the mouse is over the places layer.
+        map.on('mouseenter', 'places', function () {
+            map.getCanvas().style.cursor = 'pointer';
+        });
+
+        // Change it back to a pointer when it leaves.
+        map.on('mouseleave', 'places', function () {
+            map.getCanvas().style.cursor = '';
+        });
         
-        const swiper = new Swiper('.swiper-container', {
-              speed: 400,
+        //Navigation ---------------------------------------------------------------
+        
+        const swiper = new Swiper('.swiper-container', { //Create instance of Swiper
+              speed: 400, //Set speed of transistion
               spaceBetween: 100,
-              allowTouchMove: false,
+              allowTouchMove: false, //Disable interaction directly by user
         });
         
         function navMatch(){
@@ -128,6 +366,7 @@
         function navMap(){
             swiper.slideTo(1);
             resetNav();
+            map.resize();
             document.getElementById("icon-map").classList.add('red-text', 'lighten-2');
             document.getElementById("swiper").style.visibility = "hidden";
             document.getElementById("map").style.visibility = "visible";
@@ -138,6 +377,7 @@
             swiper.slideTo(2);
             resetNav();
             document.getElementById("icon-chat").classList.add('red-text', 'lighten-2');
+            document.getElementById("message-bar").style.display = "";
         }
         
         function navInfo(){
@@ -152,6 +392,7 @@
             document.getElementById("icon-map").classList.remove('red-text', 'lighten-2');
             document.getElementById("icon-chat").classList.remove('red-text', 'lighten-2');
             document.getElementById("icon-info").classList.remove('red-text', 'lighten-2');
+            document.getElementById("message-bar").style.display = "none";
         }
         
         function resetMap(){
@@ -159,6 +400,14 @@
             document.getElementById("map").style.visibility = "hidden";
         }
         
+        function match(){
+            document.getElementById('match-screen-1').style.display = "none";
+            document.getElementById('match-screen-2').style.display = "";
+            setTimeout(function (){
+                document.getElementById('match-screen-2').style.display = "none";
+                document.getElementById('match-screen-3').style.display = "";
+            }, 5000); 
+        }
     </script>
     </body>
   </html>
