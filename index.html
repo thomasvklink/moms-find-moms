@@ -19,11 +19,11 @@
     <li>
       <div class=""><img src="images/moms-find-moms.svg" style="margin-top: 10px; margin-left: 20px; width: 250px; height: auto;"></div>
     </li>
-        <li><a href="sass.html"><i class="material-icons black-text left">account_circle</i>Profiel</a></li>
+        <li><a href="#profile" onclick="navProfile()"><i class="material-icons black-text left">account_circle</i>Profiel</a></li>
         <li><a href="#match" onclick="navMatch()"><i id="icon-match-side" class="material-icons red-text lighten-2 left">favorite</i>Match</a></li>
         <li><a href="#map" onclick="navMap()"><i id="icon-map-side" class="material-icons">explore</i>Map</a></li>
         <li><a href="#chat" onclick="navChat()"><i id="icon-chat-side" class="material-icons">chat</i>Chat</a></li>
-        <li><a href="#info" onclick="navInfo()"><i id="icon-info-side" class="material-icons">info</i>info</a></li>
+        <li><a href="#info" onclick="navInfo()"><i id="icon-info-side" class="material-icons">info</i>Info</a></li>
     </ul>
     <div class="navbar-fixed">
     <nav>
@@ -31,7 +31,7 @@
           <a href="index.html" class="brand-logo center"><img src="images/moms-find-moms-icon.svg" style="margin-top: 10px; width: 40px; height: auto;"></a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
           <ul id="nav-mobile" class=" hide-on-med-and-down">
-            <li><a class="black-text"><i class="material-icons left">account_circle</i>Profiel</a></li>
+            <li><a class="black-text" onclick="navProfile()"><i class="material-icons left">account_circle</i>Profiel</a></li>
           </ul>
         </div>
     </nav>
@@ -43,6 +43,69 @@
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="row">
+                    <div class="col m6 offset-m3 s12">
+                      <div class="row">
+                        <form class="col s12">
+                          <div class="row">
+                            <div class="card red lighten-1">
+                                <div class="card-content white-text ">
+                                    <span class="card-title">Profiel aanmaken</span>
+                                  <p>Om je het best te matchen hebben we wat informatie van je nodig.</p>
+                                </div>
+                            </div>
+                            <div class="input-field col s6">
+                              <input id="first_name" type="text" class="validate">
+                              <label for="first_name">Voornaam</label>
+                            </div>
+                            <div class="input-field col s6">
+                              <input id="last_name" type="text" class="validate">
+                              <label for="last_name">Achternaam</label>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="input-field col s12">
+                              <input id="email" type="text" class="validate">
+                              <label for="email">Email</label>
+                            </div>
+                          </div>
+                            
+                        <div class="card red lighten-1">
+                            <div class="card-content white-text ">
+                              <p>Met behulp van de volgende vragen proberen wij je met de best passende andere moeder te matchen.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="input-field col s12">
+                              <input id="hobby" type="text" class="validate">
+                              <label for="hobby">Wat is je favoriete hobby?</label>
+                            </div>
+                          </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                              <input id="holiday" type="text" class="validate">
+                              <label for="holiday">Wat is je favoriete vakantieland?</label>
+                            </div>
+                          </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                              <input id="dish" type="text" class="validate">
+                              <label for="dish">Favoriete gerecht?</label>
+                            </div>
+                          </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                              <input id="toy" type="text" class="validate">
+                              <label for="toy">Welk speelgoed van je kind vind je zelf het leukste?</label>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                  </div>
+                </div>
+            </div>
             <div class="swiper-slide">
                 <div class="container">
                     <div id="match-screen-1">
@@ -293,6 +356,7 @@
     <script>
         $(document).ready(function(){
             M.AutoInit(); //Initalize Javascript of Materialize framework
+            map.resize();
         });
         
         //Mapbox implementation ----------------------------------------------------
@@ -354,17 +418,24 @@
               speed: 400, //Set speed of transistion
               spaceBetween: 100,
               allowTouchMove: false, //Disable interaction directly by user
+              initialSlide: 1,
         });
+        
+        function navProfile(){
+            resetMap();
+            swiper.slideTo(0);
+            resetNav();
+        }
         
         function navMatch(){
             resetMap();
-            swiper.slideTo(0);
+            swiper.slideTo(1);
             resetNav();
             document.getElementById("icon-match").classList.add('red-text', 'lighten-2');
         }
         
         function navMap(){
-            swiper.slideTo(1);
+            swiper.slideTo(2);
             resetNav();
             map.resize();
             document.getElementById("icon-map").classList.add('red-text', 'lighten-2');
@@ -374,7 +445,7 @@
         
         function navChat(){
             resetMap();
-            swiper.slideTo(2);
+            swiper.slideTo(3);
             resetNav();
             document.getElementById("icon-chat").classList.add('red-text', 'lighten-2');
             document.getElementById("message-bar").style.display = "";
@@ -382,7 +453,7 @@
         
         function navInfo(){
             resetMap();
-            swiper.slideTo(3);
+            swiper.slideTo(4);
             resetNav();
             document.getElementById("icon-info").classList.add('red-text', 'lighten-2');
         }
