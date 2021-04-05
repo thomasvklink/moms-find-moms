@@ -19,11 +19,11 @@
     <li>
       <div class=""><img src="images/moms-find-moms.svg" style="margin-top: 10px; margin-left: 20px; width: 250px; height: auto;"></div>
     </li>
-        <li><a href="#profile" onclick="navProfile()"><i class="material-icons black-text left">account_circle</i>Profiel</a></li>
-        <li><a href="#match" onclick="navMatch()"><i id="icon-match-side" class="material-icons red-text lighten-2 left">favorite</i>Match</a></li>
-        <li><a href="#map" onclick="navMap()"><i id="icon-map-side" class="material-icons">explore</i>Map</a></li>
-        <li><a href="#chat" onclick="navChat()"><i id="icon-chat-side" class="material-icons">chat</i>Chat</a></li>
-        <li><a href="#info" onclick="navInfo()"><i id="icon-info-side" class="material-icons">info</i>Info</a></li>
+        <li><a  onclick="navProfile()"><i class="material-icons black-text left">account_circle</i>Profiel</a></li>
+        <li><a  onclick="navMatch()"><i id="icon-match-side" class="material-icons red-text lighten-2 left">favorite</i>Match</a></li>
+        <li><a  onclick="navMap()"><i id="icon-map-side" class="material-icons">explore</i>Map</a></li>
+        <li><a  onclick="navChat()"><i id="icon-chat-side" class="material-icons">chat</i>Chat</a></li>
+        <li><a  onclick="navInfo()"><i id="icon-info-side" class="material-icons">info</i>Info</a></li>
     </ul>
     <div class="navbar-fixed">
     <nav>
@@ -339,14 +339,28 @@
                 </form>
             </div>
             <ul class="tabs tabs-icon tabs-home">
-            <li class="tab col s3" style="height: 80px"><a href="#match" onclick="navMatch()"><i id="icon-match" class="material-icons red-text lighten-2">favorite</i><b>Match</b></a></li>
-            <li class="tab col s3" style="height: 80px"><a href="#map" onclick="navMap()"><i id="icon-map" class="material-icons">explore</i><b>Map</b></a></li>
-            <li class="tab col s3" style="height: 80px"><a href="#chat" onclick="navChat()"><i id="icon-chat" class="material-icons">chat</i><b>Chat</b></a></li>
-            <li class="tab col s3" style="height: 80px"><a href="#info" onclick="navInfo()"><i id="icon-info" class="material-icons">info</i><b>Info</b></a></li>
+            <li class="tab col s3" style="height: 80px"><a onclick="navMatch()"><i id="icon-match" class="material-icons red-text lighten-2">favorite</i><b>Match</b></a></li>
+            <li class="tab col s3" style="height: 80px"><a id="map-click" onclick="navMap()"><i id="icon-map" class="material-icons">explore</i><b>Map</b></a></li>
+            <li class="tab col s3" style="height: 80px"><a onclick="navChat()"><i id="icon-chat" class="material-icons">chat</i><b>Chat</b></a></li>
+            <li class="tab col s3" style="height: 80px"><a onclick="navInfo()"><i id="icon-info" class="material-icons">info</i><b>Info</b></a></li>
           </ul>
         </div>
           
     </nav>  
+        
+    <!-- Modal Structure -->
+      <div id="model-no-profile" class="modal">
+        <div class="modal-content">
+          <h4>Oh no!</h4>
+          <p><br>It seems that you do not have a profile yet. <br><br> Please fill in your information on the profile page.</p>
+          <a class="waves-effect waves-light btn red lighten-1 modal-close" onclick="navProfile()" style="margin-top: 20px;" ><i class="material-icons left">account_circle</i>Go to your profile</a>
+        </div>
+        <div class="modal-footer">
+            
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">close</a>
+            
+        </div>
+      </div>
         
       <!--JavaScript at end of body for optimized loading-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

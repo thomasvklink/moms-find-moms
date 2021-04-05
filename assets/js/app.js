@@ -1,8 +1,8 @@
+//Initialize Javascript of Materialize framework
 $(document).ready(function(){
-            M.AutoInit(); //Initalize Javascript of Materialize framework
-            map.resize();
+            M.AutoInit();
         });
-        
+
 //Mapbox implementation ----------------------------------------------------
 
 mapboxgl.accessToken = 'pk.eyJ1IjoidGhvbWFzdmtsaW5rIiwiYSI6ImNrbXQ4M296bDBpdXEycG13NGYwcnM4Z2YifQ.Y-HjTi_KvGjUZAm0oN8yRg';
@@ -12,14 +12,6 @@ mapboxgl.accessToken = 'pk.eyJ1IjoidGhvbWFzdmtsaW5rIiwiYSI6ImNrbXQ4M296bDBpdXEyc
     center: [6.893281367468944, 52.21924535469515],
     zoom: 12,
 });
-
-map.on('load', function () {
-    map.resize();
-});
-
-map.on('idle',function(){
-    map.resize()
-})
 
 // Add function to display user location control to the map.
 map.addControl(
@@ -33,7 +25,7 @@ map.addControl(
 
 // When a click event occurs on a feature in the places layer, open a popup at the
 // location of the feature, with description HTML from its properties.
-map.on('click', 'places', function (e) {
+map.on('click', 'speeltuinen', function (e) {
     var coordinates = e.features[0].geometry.coordinates.slice();
     var description = e.features[0].properties.description;
 
@@ -66,32 +58,35 @@ const swiper = new Swiper('.swiper-container', { //Create instance of Swiper
       speed: 400, //Set speed of transistion
       spaceBetween: 100,
       allowTouchMove: false, //Disable interaction directly by user
-      initialSlide: 1,
+      initialSlide: 1, //Start on slide 2 (Match)
 });
 
-function navProfile(){
+function navProfile(){ //Navigate to profile page (slide 0)
     resetMap();
     swiper.slideTo(0);
     resetNav();
 }
 
-function navMatch(){
+function navMatch(){ //Navigate to match page (slide 1)
     resetMap();
     swiper.slideTo(1);
     resetNav();
-    document.getElementById("icon-match").classList.add('red-text', 'lighten-2');
+    document.getElementById("icon-match").classList.add('red-text', 'lighten-2'); //Set icon color to red illustrate that this item is active
 }
 
-function navMap(){
+function navMap(){ //Navigate to map page (slide 2)
     swiper.slideTo(2);
     resetNav();
-    map.resize();
     document.getElementById("icon-map").classList.add('red-text', 'lighten-2');
     document.getElementById("swiper").style.visibility = "hidden";
     document.getElementById("map").style.visibility = "visible";
+    
+    setTimeout(function (){
+        map.resize();
+    }, 100);
 }
 
-function navChat(){
+function navChat(){ //Navigate to chat page (slide 3)
     resetMap();
     swiper.slideTo(3);
     resetNav();
@@ -99,14 +94,14 @@ function navChat(){
     document.getElementById("message-bar").style.display = "";
 }
 
-function navInfo(){
+function navInfo(){ //Navigate to info page (slide 4)
     resetMap();
     swiper.slideTo(4);
     resetNav();
     document.getElementById("icon-info").classList.add('red-text', 'lighten-2');
 }
 
-function resetNav(){
+function resetNav(){ //Reset icon highlight colors in nav
     document.getElementById("icon-match").classList.remove('red-text', 'lighten-2');
     document.getElementById("icon-map").classList.remove('red-text', 'lighten-2');
     document.getElementById("icon-chat").classList.remove('red-text', 'lighten-2');
@@ -114,12 +109,14 @@ function resetNav(){
     document.getElementById("message-bar").style.display = "none";
 }
 
-function resetMap(){
+function resetMap(){ //Hide the map and display the swiper (pages)
     document.getElementById("swiper").style.visibility = "visible";
     document.getElementById("map").style.visibility = "hidden";
 }
 
-function match(){
+//Matching -----------------------------------------------------------------
+
+function match(){ //Fake a matching process for demo
     document.getElementById('match-screen-1').style.display = "none";
     document.getElementById('match-screen-2').style.display = "";
     setTimeout(function (){
