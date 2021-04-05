@@ -17,6 +17,10 @@ map.on('load', function () {
     map.resize();
 });
 
+map.on('idle',function(){
+    map.resize()
+})
+
 // Add function to display user location control to the map.
 map.addControl(
     new mapboxgl.GeolocateControl({
