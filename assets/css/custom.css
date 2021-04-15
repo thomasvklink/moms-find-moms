@@ -1,3 +1,12 @@
+/*
+ --- Moms find Moms ---
+ Creative Technology - Living and Working Tomorrow Project Prototype
+ Group 17 - Mommification
+ by Thomas van Klink - t.vanklink@student.utwente.nl
+ April 2021
+ ----------------------
+*/
+
 /*Homepage button*/
 
 .button-go {
@@ -76,9 +85,9 @@
     visibility: hidden;
 }
 
-/*Loading spinner
-From https://loading.io/css/
-Adapted by Thomas van Klink
+/*Loading spinner for matching progress
+    From https://loading.io/css/
+    Adapted by Thomas van Klink in line 92-100, 105-114
 */
 
 .lds-roller {
@@ -167,4 +176,20 @@ Adapted by Thomas van Klink
   100% {
     transform: rotate(360deg);
   }
+}
+
+/*Language flag icons*/
+
+.flag{
+    width: 40px;
+    height: auto;
+    margin-top: -10px;
+    margin-bottom: -15px; 
+}
+
+.sidebar-flag{
+    width: 30px;
+    height: auto;
+    margin-top: -10px;
+    margin-bottom: -10px; 
 }

@@ -1,3 +1,11 @@
+<!--
+--- Moms find Moms ---
+ Creative Technology - Living and Working Tomorrow Project Prototype
+ Group 17 - Mommification
+ by Thomas van Klink - t.vanklink@student.utwente.nl
+ April 2021
+----------------------
+-->
 <!DOCTYPE html>
   <html>
     <head>
@@ -14,37 +22,48 @@
     </head>
 
     <body>
+        
     <ul class="sidenav" id="mobile-demo">
-    <li>
-      <div class=""><img src="images/moms-find-moms.svg" style="margin-top: 10px; margin-left: 20px; width: 250px; height: auto;"></div>
-    </li>
-        <li><a  onclick="navProfile()"><i class="material-icons black-text left">account_circle</i>Profiel</a></li>
-        <li><a  onclick="navMatch()"><i id="icon-match-side" class="material-icons red-text lighten-2 left">favorite</i>Match</a></li>
-        <li><a  onclick="navMap()"><i id="icon-map-side" class="material-icons">explore</i>Map</a></li>
-        <li><a  onclick="navChat()"><i id="icon-chat-side" class="material-icons">chat</i>Chat</a></li>
-        <li><a  onclick="navInfo()"><i id="icon-info-side" class="material-icons">info</i>Info</a></li>
+        <li>
+          <div class=""><img src="images/moms-find-moms.svg" style="margin-top: 10px; margin-left: 20px; width: 250px; height: auto;"></div>
+        </li>
+            <li><a  onclick="navProfile()"><i class="material-icons black-text left">account_circle</i>Profiel</a></li>
+            <li><a  onclick="navMatch()"><i id="icon-match-side" class="material-icons red-text lighten-2 left">favorite</i>Match</a></li>
+            <li><a  onclick="navMap()"><i id="icon-map-side" class="material-icons">explore</i>Map</a></li>
+            <li><a  onclick="navChat()"><i id="icon-chat-side" class="material-icons">chat</i>Chat</a></li>
+            <li><a  onclick="navInfo()"><i id="icon-info-side" class="material-icons">info</i>Info</a></li>
+        <li>
+            <div class="row center-align" style="margin-top: 20px;">
+                <div class="col s4 offset-s2">
+                    <a class="btn white" href="en.html"><img class="sidebar-flag" src="images/GB.png"></a>
+                </div>
+                <div class="col s3">
+                    <a class="btn white" href="nl.html"><img class="sidebar-flag" src="images/NL.png"></a>
+                </div>
+            </div>
+        </li>
     </ul>
+        
     <div class="navbar-fixed">
-    <nav>
-        <div class="nav-wrapper white">
-          <a href="index.html" class="brand-logo center"><img src="images/moms-find-moms-icon.svg" style="margin-top: 10px; width: 40px; height: auto;"></a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
-          <ul id="nav-mobile" class=" hide-on-med-and-down">
-            <li><a class="black-text" onclick="navProfile()"><i class="material-icons left">account_circle</i>Profiel</a></li>
-          </ul>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a class="black-text" href="en.html"><img style="width: 40px; height: auto; margin-top: -10px; margin-bottom: -15px;" src="images/GB.png"></a></li>
-          </ul>
-        </div>
-    </nav>
-    
+        <nav>
+            <div class="nav-wrapper white">
+              <a href="index.html" class="brand-logo center"><img src="images/moms-find-moms-icon.svg" style="margin-top: 10px; width: 40px; height: auto;"></a>
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons black-text">menu</i></a>
+              <ul id="nav-mobile" class=" hide-on-med-and-down">
+                  <li><a class="black-text" onclick="navProfile()"><i class="material-icons left">account_circle</i><span id="profile_name">Profiel</span></a></li>
+              </ul>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a class="black-text" href="en.html"><img class="flag" src="images/GB.png"></a></li>
+              </ul>
+            </div>
+        </nav>
     </div>    
     
         <!-- Slider main container -->
         <div id="swiper" class="swiper-container" style="margin-bottom: 80px;">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
-            <!-- Slides -->
+            <!-- Slides/tabs of web app -->
             <div class="swiper-slide">
               <div class="row">
                     <div class="col m6 offset-m3 s12">
@@ -103,6 +122,7 @@
                               <label for="toy">Welk speelgoed van je kind vind je zelf het leukste?</label>
                             </div>
                           </div>
+                            <a class="btn btn-large red lighten-1" onclick="setProfile()">opslaan</a>
                         </form>
                       </div>
                   </div>
@@ -112,14 +132,14 @@
                 <div class="container">
                     <div id="match-screen-1">
                         <div class="row">
-                            <div class="col s12">
-                                <h2 class="center-align">Vind een andere moeder</h2>
+                            <div id="match-title" class="col s12 center-align">
+                                <h2>Vind een andere moeder</h2>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col s12 center-align">
-                                <a href="#match" onclick="match()" class="waves-effect waves-light red lighten-1 btn button-go">Ga</a>
+                                <a href="" onclick="match()" class="waves-effect waves-light red lighten-1 btn button-go">Ga</a>
                             </div>
                         </div>
 
@@ -262,7 +282,7 @@
                           <div class="card red lighten-1">
                             <div class="card-content white-text">
                               <span class="card-title"><b>Moms find Moms</b></span>
-                              <p>This website is a protoype system for the Living and Working Tomorrow project in Module 3 of Creative Technology <br> at the University of Twente.</p>
+                              <p> Deze website is een prototype voor het Living and Working Tomorrow project in de derde module van Creative Technology aan de University of Twente</p>
                                 <p></p>
                             </div>
                           </div>
@@ -270,7 +290,7 @@
                         <div class="col s12 m6 offset-m3">
                           <div class="card red lighten-1">
                             <div class="card-content white-text">
-                              <p>Build by<br><br></p>
+                              <p>Ontworpen door<br><br></p>
                                 <p><b>Group 17 - Mommification</b><br><br>
                                 Gracy Nedev<br>
                                 Jesse Boomkamp<br>
@@ -278,7 +298,7 @@
                                 Wessel Verstelle<br>
                                 Manu van den Dolder<br>
                                 Thomas van Klink<br><br>
-                                for <b>Humanitas</b>
+                                in opdracht van <b>Humanitas</b>
                                 </p>
                             </div>
                           </div>
@@ -286,7 +306,7 @@
                         <div class="col s12 m6 offset-m3">
                           <div class="card grey lighten-1">
                             <div class="card-content white-text">
-                              <p>The following framworks have been used to build this website:<br><br></p>
+                              <p>De volgende frameworks zijn gebruikt voor het schrijven van deze website:<br><br></p>
                                 <table>
                                 <thead>
                                   <tr>
@@ -298,7 +318,7 @@
                                 <tbody>
                                   <tr>
                                     <td>Materialize</td>
-                                    <td>Front-end framework</td>
+                                    <td>Front-end</td>
                                     <td><a class="red-text text-lighten-1" href="https://materializecss.com/">materializecss.com</a></td>
                                   </tr>
                                   <tr>
@@ -311,8 +331,14 @@
                                     <td>Interactive custom map</td>
                                     <td><a class="red-text text-lighten-1" href="https://www.mapbox.com/">mapbox.com</a></td>
                                   </tr>
+                                  <tr>
+                                    <td>Font Awesome</td>
+                                    <td>Icons</td>
+                                    <td><a class="red-text text-lighten-1" href="https://fontawesome.com/">fontawesome.com</a></td>
+                                  </tr>
                                 </tbody>
                               </table>
+                                <p style="margin-top: 20px;">Broncode is beschikbaar op <a class="red-text text-lighten-1" href="https://github.com/thomasvklink/moms-find-moms">Github</a></p>
                             </div>
                           </div>
                         </div>
@@ -323,7 +349,7 @@
           </div>
         </div>
         
-    <div id='map'></div>
+    <div id='map'></div> <!-- Load map behind all content in advance -->
         
     <nav class="bottom white" style="height: auto; z-index: 1;">
         
@@ -351,16 +377,25 @@
     </nav>  
         
     <!-- Modal Structure -->
-      <div id="model-no-profile" class="modal">
+      <div id="modal-no-profile" class="modal">
         <div class="modal-content">
-          <h4>Oh no!</h4>
-          <p><br>It seems that you do not have a profile yet. <br><br> Please fill in your information on the profile page.</p>
-          <a class="waves-effect waves-light btn red lighten-1 modal-close" onclick="navProfile()" style="margin-top: 20px;" ><i class="material-icons left">account_circle</i>Go to your profile</a>
+          <h4>Oh nee!</h4>
+          <p><br>Het lijkt erop dat je nog geen profiel hebt. <br><br> Maak er eentje aan op de profiel pagina.</p>
+          <a class="waves-effect waves-light btn red lighten-1 modal-close" onclick="navProfile()" style="margin-top: 20px;" ><i class="material-icons left">account_circle</i>Ga naar je profiel</a>
         </div>
         <div class="modal-footer">
-            
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">close</a>
-            
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">sluit</a>
+        </div>
+      </div>
+        
+      <div id="modal-profile-succes" class="modal">
+        <div class="modal-content">
+          <h4>Gelukt!</h4>
+          <p><br>Je profiel is nu ingesteld <span id="modal-name">Naam</span> <br><br></p>
+          <a class="waves-effect waves-light btn red lighten-1 modal-close" onclick="navMatch()" style="margin-top: 20px;" ><i class="material-icons left">favorite</i>Begin een match</a>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">sluit</a>
         </div>
       </div>
         
