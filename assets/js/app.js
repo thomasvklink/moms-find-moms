@@ -161,8 +161,13 @@ function setProfile(){
     
     profile = [forename, surname, email]; //Store data in array
     
-    loadProfile(); //Load the profile data into the page
-    profileCheck = true; //The profile has been created set check variable to true
+    if (forename === ""){ //Check if the user actually entered at least the forename field
+        alert("Please fill in the required fields.");
+    } else {
+        loadProfile(); //Load the profile data into the page
+        profileCheck = true; //The profile has been created set check variable to true
+    }
+    
 }
 
 function loadProfile(){ //Loading the profile into the page
