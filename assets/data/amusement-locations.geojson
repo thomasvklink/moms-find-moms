@@ -1,0 +1,80 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<a onclick=\"navChat()\" class=\"btn red lighten-2\">Plan </a>",
+        "title": "Concordia"
+      },
+      "geometry": {
+        "coordinates": [
+          6.895829,
+          52.221151
+        ],
+        "type": "Point"
+      },
+      "id": "1ef60bae04a1f82e87f7378ed473d3a6"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<a onclick=\"navChat()\" class=\"btn red lighten-2\">Plan </a>",
+        "title": "Krazy Kangaroo"
+      },
+      "geometry": {
+        "coordinates": [
+          6.887953,
+          52.190756
+        ],
+        "type": "Point"
+      },
+      "id": "20941dbde4add3cbfe929b881ef3db9f"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<a onclick=\"navChat()\" class=\"btn red lighten-2\">Plan </a>",
+        "title": "Aquadrome"
+      },
+      "geometry": {
+        "coordinates": [
+          6.896817,
+          52.206744
+        ],
+        "type": "Point"
+      },
+      "id": "717071f58694fa1a72f74d88161159f2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Ballorig",
+        "description": "<a onclick=\"navChat()\" class=\"btn red lighten-2\">Plan </a>"
+      },
+      "geometry": {
+        "coordinates": [
+          6.901627,
+          52.20591
+        ],
+        "type": "Point"
+      },
+      "id": "993834d96c5c3133983b04f58d074519"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<a onclick=\"navChat()\" class=\"btn red lighten-2\">Plan </a>",
+        "title": "Kinepolis"
+      },
+      "geometry": {
+        "coordinates": [
+          6.8356,
+          52.238315
+        ],
+        "type": "Point"
+      },
+      "id": "f0d79e16bc78438d35ec6af3f23c93bc"
+    }
+  ],
+  "type": "FeatureCollection"
+}

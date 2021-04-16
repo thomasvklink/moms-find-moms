@@ -1,0 +1,172 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<a onclick=\"navChat()\" class=\"btn red lighten-2\">Plan </a>",
+        "title": "Pleintjespark"
+      },
+      "geometry": {
+        "coordinates": [
+          6.884432,
+          52.201798
+        ],
+        "type": "Point"
+      },
+      "id": "10000cbd914c1d8a112098f45f2a07f2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<a onclick=\"navChat()\" class=\"btn red lighten-2\">Plan </a>",
+        "title": "University of Twente"
+      },
+      "geometry": {
+        "coordinates": [
+          6.851968,
+          52.241957
+        ],
+        "type": "Point"
+      },
+      "id": "670c3cfbd6fb03b70e98be9929c61081"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Cromhoffpark",
+        "description": "<a onclick=\"navChat()\" class=\"btn red lighten-2\">Plan </a>"
+      },
+      "geometry": {
+        "coordinates": [
+          6.885414,
+          52.208068
+        ],
+        "type": "Point"
+      },
+      "id": "683ec75f430c109c339ee7577c66fa10"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Volkspark",
+        "description": "<a onclick=\"navChat()\" class=\"btn red lighten-2\">Plan </a>",
+        "feature": ""
+      },
+      "geometry": {
+        "coordinates": [
+          6.877933,
+          52.219133
+        ],
+        "type": "Point"
+      },
+      "id": "a70bddac8e90f6935ff297d2ceff80de"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<a onclick=\"navChat()\" class=\"btn red lighten-2\">Plan </a>",
+        "title": "Esmarkpark"
+      },
+      "geometry": {
+        "coordinates": [
+          6.928863,
+          52.226394
+        ],
+        "type": "Point"
+      },
+      "id": "a852b32149ef058172b26b939d605e3d"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<a onclick=\"navChat()\" class=\"btn red lighten-2\">Plan </a>",
+        "title": "Zweringbeekpark"
+      },
+      "geometry": {
+        "coordinates": [
+          6.870247,
+          52.202519
+        ],
+        "type": "Point"
+      },
+      "id": "c023a8a2c1ace48a14c9e993f283ec65"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<a onclick=\"navChat()\" class=\"btn red lighten-2\">Plan </a>",
+        "title": "Blijdensteinpark"
+      },
+      "geometry": {
+        "coordinates": [
+          6.90893,
+          52.21678
+        ],
+        "type": "Point"
+      },
+      "id": "d5b13ccd2588115b0f9b29070f65ed0e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<a onclick=\"navChat()\" class=\"btn red lighten-2\">Plan </a>",
+        "title": "Florapark"
+      },
+      "geometry": {
+        "coordinates": [
+          6.909938,
+          52.227506
+        ],
+        "type": "Point"
+      },
+      "id": "dca85cbc79b9c6c3bf53af94b430f3e3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Van Heekplein",
+        "description": "Wandel locatie"
+      },
+      "geometry": {
+        "coordinates": [
+          6.897412,
+          52.217851
+        ],
+        "type": "Point"
+      },
+      "id": "e1e4afe12cd27d5c5870a748a65a8671"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Oude Markt",
+        "description": "",
+        "feature": ""
+      },
+      "geometry": {
+        "coordinates": [
+          6.895353,
+          52.22083
+        ],
+        "type": "Point"
+      },
+      "id": "e368b2fa6b1cc92224d080e60df2896b"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Ledeboerpark",
+        "description": "<a onclick=\"navChat()\" class=\"btn red lighten-2\">Plan </a>"
+      },
+      "geometry": {
+        "coordinates": [
+          6.868687,
+          52.234715
+        ],
+        "type": "Point"
+      },
+      "id": "e588b1de8fba253bb2e854031f406f59"
+    }
+  ],
+  "type": "FeatureCollection"
+}

@@ -1,0 +1,140 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<a onclick=\"navChat()\" class=\"btn red lighten-2\">Plan </a>",
+        "title": "Iremia"
+      },
+      "geometry": {
+        "coordinates": [
+          6.880731,
+          52.215729
+        ],
+        "type": "Point"
+      },
+      "id": "117a261ba72aa200e076d3b2c92d8548"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<a onclick=\"navChat()\" class=\"btn red lighten-2\">Plan </a>",
+        "title": "Varvik"
+      },
+      "geometry": {
+        "coordinates": [
+          6.900459,
+          52.208274
+        ],
+        "type": "Point"
+      },
+      "id": "1e5fd1cc681fda9760cec2c961cea8d2"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<a onclick=\"navChat()\" class=\"btn red lighten-2\">Plan </a>",
+        "title": "'t Hoogeland"
+      },
+      "geometry": {
+        "coordinates": [
+          6.90472,
+          52.213164
+        ],
+        "type": "Point"
+      },
+      "id": "47e1bded72b96b33a2cb257fd9166f1e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Hoevelink",
+        "description": "<a onclick=\"navChat()\" class=\"btn red lighten-2\">Plan </a>"
+      },
+      "geometry": {
+        "coordinates": [
+          6.905377,
+          52.229728
+        ],
+        "type": "Point"
+      },
+      "id": "59e1ff53dbf062f6b5e64dfbf83955e0"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<a onclick=\"navChat()\" class=\"btn red lighten-2\">Plan </a>",
+        "title": "Mekkelholt"
+      },
+      "geometry": {
+        "coordinates": [
+          6.892561,
+          52.23429
+        ],
+        "type": "Point"
+      },
+      "id": "59fe6fce518dd9d53f7d9c6de5898ec3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<a onclick=\"navChat()\" class=\"btn red lighten-2\">Plan </a>",
+        "title": "'t Honk"
+      },
+      "geometry": {
+        "coordinates": [
+          6.858024,
+          52.210188
+        ],
+        "type": "Point"
+      },
+      "id": "5c359659d012d692cec44888ae02c4d0"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<a onclick=\"navChat()\" class=\"btn red lighten-2\">Plan </a>",
+        "title": "Wesselerbrink"
+      },
+      "geometry": {
+        "coordinates": [
+          6.883401,
+          52.198407
+        ],
+        "type": "Point"
+      },
+      "id": "9a9d9d24fd94db94501cfe32e65da7ff"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<a onclick=\"navChat()\" class=\"btn red lighten-2\">Plan </a>",
+        "title": "Kozakkenpark"
+      },
+      "geometry": {
+        "coordinates": [
+          6.873868,
+          52.2271
+        ],
+        "type": "Point"
+      },
+      "id": "9c57ec0da7af57e69a3a9848ba1ec769"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "description": "<a onclick=\"navChat()\" class=\"btn red lighten-2\">Plan </a>",
+        "title": "Lindenhof"
+      },
+      "geometry": {
+        "coordinates": [
+          6.925392,
+          52.221642
+        ],
+        "type": "Point"
+      },
+      "id": "ba03bb719b5b84b4d3d33c575fc5009d"
+    }
+  ],
+  "type": "FeatureCollection"
+}
